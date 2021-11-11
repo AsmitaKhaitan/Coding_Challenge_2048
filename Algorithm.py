@@ -127,3 +127,19 @@ def reverse(board):
             empty_board[i].append(board[i][3-j])
 
     return empty_board
+
+
+#function to transpose the board (matrix) so that the other commands (other than left to right) can be executed 
+#by using the compress function that only works for left to right
+
+def transpose(board):
+
+    #empty grid is created to store the transpose of the board 
+    empty_board=[]
+    for i in range(4):
+        empty_board.append([])
+        for j in range(4):
+            empty_board[i].append(board[j][i])
+    return empty_board
+    
+
