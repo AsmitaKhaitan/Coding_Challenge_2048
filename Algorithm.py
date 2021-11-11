@@ -113,4 +113,17 @@ def merge(board):
                 c= True #since change is being made in this conditional statement, the flag is being modified
 
     return board,c 
-    
+
+#function to reverse the board (matrix) so that the other commands (other than left to right) can be executed 
+#by using the compress function that only works for left to right
+
+def reverse(board):
+
+    #a new board is being created to store the reversed board
+    empty_board=[]      
+    for i in range(4):
+        empty_board.append([])
+        for j in range(4):
+            empty_board[i].append(board[i][3-j])
+
+    return empty_board
