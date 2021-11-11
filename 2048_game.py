@@ -1,6 +1,7 @@
 
 #importing the Algorithm.py file where all the fuctions for the operatins are written
 import Algorithm
+import numpy as np
 
 #Driver code
 if __name__=='__main__':
@@ -62,4 +63,4 @@ while(True):
     else:
         print("Invalid choice of move, sorry!")
     #print the board after each move
-    print(board)
+    print(np.matrix(board))
