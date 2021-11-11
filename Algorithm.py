@@ -164,7 +164,6 @@ def left(mat):
 #function to update the matrix if the user swipes right
 
 def right(mat):
-
     #matrix/game board is reverse and stored in a new var
     new_mat = reverse(mat)
     new_mat,c= left(new_mat)        #move left
@@ -177,7 +176,6 @@ def right(mat):
 #function to update the board if the user swipes up
 
 def up(mat):
-
     #a new var to store the transposed board/matrix (mat)
     new_mat = transpose(mat)
 
@@ -189,5 +187,22 @@ def up(mat):
 
     #return the updated matrix along with the bool flag var
     return new_mat,c
-    
+
+#function to update the board if the user swipes down
+
+def down(mat):
+    #new var to store the transposed matrix
+    new_mat= transpose(mat)
+
+    #move the transposed matrix to the right 
+    #(reverses the matrix and moves it to the left and reverses it back, inside the right() function)
+    new_mat,c= right(new_mat)
+
+    #transpose the matrix back to get the final result
+    new_mat= transpose(new_mat)
+    #return the matrix and the flag variable
+    return new_mat,c
+
+
+
 
