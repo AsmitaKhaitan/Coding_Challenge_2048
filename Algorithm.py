@@ -18,19 +18,18 @@ def start():
     print("Press '2' to MOVE RIGHT")
     print("Press '3' to MOVE UP")
     print("Press '4' to MOVE DOWN")
-
     add_num(board)
     return board
 
 # function to add new 2 or 4 to the board at any random cell
 def add_num(board):
     #choosing random row and column
-    r= random.rnadint(0,3)
-    c= random.rnadint(0,3)
+    r= random.randint(0,3)
+    c= random.randint(0,3)
 
     while(board[r]!=0):
-        r= random.rnadint(0,3)
-        c= random.rnadint(0,3)
+        r= random.randint(0,3)
+        c= random.randint(0,3)
 
     #the while loop breaks at a position where the board is empty (0)
     #the following adds a random 2 or 4 to the empty cell
