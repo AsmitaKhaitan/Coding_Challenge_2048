@@ -13,7 +13,7 @@ def start():
         board.append([0]*4)
 
     #printing user controls
-    print("The gaming controls are as follos:")
+    print("The gaming controls are as follows:")
     print("Press '1' to MOVE LEFT")
     print("Press '2' to MOVE RIGHT")
     print("Press '3' to MOVE UP")
@@ -27,14 +27,14 @@ def add_num(board):
     r= random.randint(0,3)
     c= random.randint(0,3)
 
-    while(board[r]!=0):
+    while(board[r][c]!=0):
         r= random.randint(0,3)
         c= random.randint(0,3)
 
     #the while loop breaks at a position where the board is empty (0)
     #the following adds a random 2 or 4 to the empty cell
     list1 = [2,4]
-    board[r] = random.choice(list1)
+    board[r][c] = random.choice(list1)
 
 
 #function to check state of game (won/lost/unfinished)
