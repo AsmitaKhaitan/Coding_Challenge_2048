@@ -26,4 +26,40 @@ while(True):
         else :
             break
 
+    #the same process like the above if condition is followed for down, left and right
+    #since "4" is for moving down 
+    elif(t=='4'):
+        board,c=Algorithm.down(board)
+        curr= Algorithm.state(board)
+        print(curr)
+        if(curr == 'CONTINUE PLAYING, THE GAME IS NOT YET OVER!!!'):
+            Algorithm.add_num(board)
 
+        else :
+            break
+
+    #since "1" is for moving left 
+    elif(t=='1'):
+        board,c=Algorithm.left(board)
+        curr= Algorithm.state(board)
+        print(curr)
+        if(curr == 'CONTINUE PLAYING, THE GAME IS NOT YET OVER!!!'):
+            Algorithm.add_num(board)
+
+        else :
+            break
+
+    #since "2" is for moving right 
+    elif(t=='2'):
+        board,c=Algorithm.right(board)
+        curr= Algorithm.state(board)
+        print(curr)
+        if(curr == 'CONTINUE PLAYING, THE GAME IS NOT YET OVER!!!'):
+            Algorithm.add_num(board)
+
+        else :
+            break
+    else:
+        print("Invalid choice of move, sorry!")
+    #print the board after each move
+    print(board)
