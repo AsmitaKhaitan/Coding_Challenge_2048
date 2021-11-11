@@ -1,2 +1,2 @@
 Two files are created Algorithm.py and 2048_game.py, the first file contains all the functions required to play the game, with all the logics and steps described as comments.
- The second file contains the driver code. This coding_challenge_2048 is a game popularly called 2048 where the aim of the game is to get the number 2048 by exponentially increasing the number 2, for 2,4,8,16,32,64,128,256,512,1024 to finally 2048.
+ The second file contains the driver code. This coding_challenge_2048 is a game popularly called 2048 where the aim of the game is to get the number 2048 by exponentially increasing the number 2, from 2,4,8,16,32,64,128,256,512,1024 to finally 2048.
