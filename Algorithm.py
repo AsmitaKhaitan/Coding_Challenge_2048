@@ -94,3 +94,23 @@ def compress(board):
                 position = position + 1
 
     return empty_board,c
+
+
+#function to merge cells after compressing 
+#merging occurs if tow cells in are the same then the double of their value is placed in the most extreme cell
+
+def merge(board):
+
+    #again, a bool variable is taken to keep track if any changes are being made to the board after the operation or not
+    c=False
+
+    #if current and next cell values are non- zero and same then the current is doubled and the next is made empty
+    for i in range(4):
+        for j in range(3):
+            if(board[i][j]==board[i][j+1] and board[i][j]!=0):
+                board[i][j]= ((board[i][j])*2)
+                board[i][j+1]=0
+                c= True #since change is being made in this conditional statement, the flag is being modified
+
+    return board,c 
+    
