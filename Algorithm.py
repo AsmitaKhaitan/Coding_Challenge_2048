@@ -63,3 +63,34 @@ def state(board):
             return 'CONTINUE PLAYING, THE GAME IS NOT YET OVER!!!'
 
     return 'SORRY Y0U LOST !! :('
+
+
+#function to compress the board from left to right only, before and after merging of the cells
+#for other operations the board will be modified so this function can be used to execute the user commands
+
+def compress(board):
+
+    c=False     #bool variable to keep track of changes made to the board
+
+    #new empty board is created and all elemnts are initialised as (0) or empty
+    empty_board=[]        
+    for i in range(4):
+        empty_board.append([0]*4)
+
+    #shifting every element to the end
+    #loop to move through each row
+    for i in range(4):
+        position =0
+
+        #loop to move through columns/cells of each row
+        for j in range(4):
+
+            #if the cell is not empty we will shift it to the previous empty position stored in position variable
+            if(board[i][j]!=0):
+                empty_board[i][position] = board[i][j]
+
+                if(j!=position):
+                    c= True     #changing the flag since a cahnge is being made
+                position = position + 1
+
+    return empty_board,c
