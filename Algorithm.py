@@ -1,5 +1,6 @@
 
 #importing random package to generate random numbers
+from hashlib import new
 import random
 
 #function to initialize the game 
@@ -141,5 +142,24 @@ def transpose(board):
         for j in range(4):
             empty_board[i].append(board[j][i])
     return empty_board
-    
+
+#function to update the matrix if the user swipes left
+
+def left(mat):
+    #compress the matrix (mat) before merging operation
+    new_mat,c1= compress(mat)
+
+    #merge the cells
+    new_mat,c2= merge(new_mat)
+
+    #c is a bool var that will store if ANY change is made, either due to merging or just by compressing
+    c= c1 or c2 
+
+    #compress after merging operation
+    new_mat, t= compress(new_mat)
+
+    #return the new matrix and the bool var to check if a change has taken place or not
+    return new_mat,c
+
+
 
