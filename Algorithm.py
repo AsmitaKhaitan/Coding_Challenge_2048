@@ -2,7 +2,6 @@
 #this fie is imported in the 2048_game.py file 
 #so that 2048_game.py can access all the functions declared in this file
 #importing random package to generate random numbers
-from hashlib import new
 import random
 
 #function to initialize the game 
